@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Галерея</title>
+  <link rel="stylesheet" href="gallery.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <p><img id="largeImg" src="https://get.wallhere.com/photo/1920x1200-px-building-city-cityscape-Gold-Coast-1270905.jpg" alt="Large image"></p>
+
+  <ul id="thumbs">
+    <li>
+      <a href="https://get.wallhere.com/photo/1920x1200-px-building-city-cityscape-Gold-Coast-1270905.jpg" title="Image 2"><img src="https://get.wallhere.com/photo/1920x1200-px-building-city-cityscape-Gold-Coast-1270905.jpg"></a>
+    </li>
+    <li>
+      <a href="http://wallpapers-images.ru/1680x1050/nature/wallpapers/wallpapers-nature-01.jpg" title="Image 3"><img src="http://wallpapers-images.ru/1680x1050/nature/wallpapers/wallpapers-nature-01.jpg"></a>
+    </li>
+    <li>
+      <a href="https://i.pinimg.com/originals/c9/ea/65/c9ea654eb3a7398b1f702c758c1c4206.jpg" title="Image 4"><img src="https://i.pinimg.com/originals/c9/ea/65/c9ea654eb3a7398b1f702c758c1c4206.jpg"></a>
+    </li>
+    <li>
+      <a href="https://get.wallhere.com/photo/lake-mountains-tree-clouds-1070958.jpg" title="Image 5"><img src="https://get.wallhere.com/photo/lake-mountains-tree-clouds-1070958.jpg"></a>
+    </li>
+    <li>
+      <a href="https://s1.1zoom.ru/b5050/984/Canada_Parks_Lake_Mountains_Forests_Scenery_Rocky_567540_1920x1200.jpg" title="Image 6"><img src="https://s1.1zoom.ru/b5050/984/Canada_Parks_Lake_Mountains_Forests_Scenery_Rocky_567540_1920x1200.jpg"></a>
+    </li>
+  </ul>
+
+  <script>
+    thumbs.onclick = function(event) {
+      let thumbnail = event.target.closest('a');
+
+      if (!thumbnail) return;
+      showThumbnail(thumbnail.href, thumbnail.title);
+      event.preventDefault();
+    }
+
+    function showThumbnail(href, title) {
+      largeImg.src = href;
+      largeImg.alt = title;
+    }
+  </script>
+
+</body>
+</html>
